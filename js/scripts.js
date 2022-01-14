@@ -12,6 +12,9 @@ const beach = $("input:radio[name=beach]:checked").val();
 const eggs = $("#eggs").val();
 
 const favoriteColor = $("#color").val();
+const colorResult = $("#colorResult").text(favoriteColor);
+
+console.log(favoriteColor);
 
 console.log(movie);
 console.log(wordAssociation);
@@ -110,23 +113,23 @@ console.log(rubySum);
 console.log(pythonSum);
 console.log(wrenSum);
 
-if (cSum > javascriptSum && cSum > rubySum && cSum > pythonSum && cSum > wrenSum) {
+if (cSum >= javascriptSum && cSum >= rubySum && cSum >= pythonSum && cSum >= wrenSum) {
   $('#cResult').show();
 }
 
-if (javascriptSum > cSum && javascriptSum > rubySum && javascriptSum > pythonSum && javascriptSum > wrenSum) {
+else if (javascriptSum >= cSum && javascriptSum >= rubySum && javascriptSum >= pythonSum && javascriptSum >= wrenSum) {
   $('#javascriptResult').show();
 }
 
-if (rubySum > cSum && rubySum > javascriptSum && rubySum > pythonSum && rubySum > wrenSum) {
+else if (rubySum >= cSum && rubySum >= javascriptSum && rubySum >= pythonSum && rubySum >= wrenSum) {
   $('#rubyResult').show();
 }
 
-if (pythonSum > cSum && pythonSum > javascriptSum && pythonSum > rubySum && pythonSum > wrenSum) {
+else if (pythonSum >= cSum && pythonSum >= javascriptSum && pythonSum >= rubySum && pythonSum >= wrenSum) {
   $('#pythonResult').show();
 }
 
-if (wrenSum > cSum && wrenSum > javascriptSum && wrenSum > rubySum && wrenSum > pythonSum) {
+else if (wrenSum >= cSum && wrenSum >= javascriptSum && wrenSum >= rubySum && wrenSum >= pythonSum) {
   $('#wrenResult').show();
 }
 

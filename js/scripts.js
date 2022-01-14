@@ -1,3 +1,6 @@
+$(document).ready(function() {
+}
+
 const movie = $("input:radio[name=movie]:checked").val();
 
 const wordAssociation = $("#wordAssociation").val();
@@ -14,4 +17,6 @@ let rubyOption = 0;
 let pythonOption = 0;
 let wrenOption = 0;
 
-if (result 'cOption' > 'javascriptOption', 'rubyOption', 'pythonOption', 'wrenOption')
+if (cOption > javacriptOption && cOption > rubyOption && cOption > pythonOption && cOption > wrenOption) {
+  $('#cResults').show();
+}

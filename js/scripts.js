@@ -2,136 +2,126 @@ $(document).ready(function() {
   $("#submitButton").submit(function(event) {
     event.preventDefault();
 
+  function submitForm(){
+    $('submitButton')
+  }
 
-const movie = $("input:radio[name=movie]:checked").val();
+  const movie = $("input:radio[name=movie]:checked").val();
 
-const wordAssociation = $("#wordAssociation").val();
+  const wordAssociation = $("#wordAssociation").val();
 
-const beach = $("input:radio[name=beach]:checked").val();
+  const beach = $("input:radio[name=beach]:checked").val();
 
-const eggs = $("#eggs").val();
+  const eggs = $("#eggs").val();
 
-const favoriteColor = $("#color").val();
-const colorResult = $("#colorResult").text(favoriteColor);
+  const favoriteColor = $("#color").val();
+  const colorResult = $("#colorResult").text(favoriteColor);
 
-console.log(favoriteColor);
+  let cSum = 0;
+  let javascriptSum = 0;
+  let rubySum = 0;
+  let pythonSum = 0;
+  let wrenSum = 0;
 
-console.log(movie);
-console.log(wordAssociation);
-console.log(beach);
-console.log(eggs);
+  if (movie === "cOption") {
+    cSum = cSum + 1;
+  }
 
-let cSum = 0;
-let javascriptSum = 0;
-let rubySum = 0;
-let pythonSum = 0;
-let wrenSum = 0;
+  if (movie === "javascriptOption") {
+    javascriptSum = javascriptSum + 1;
+  }
 
-if (movie === "cOption") {
-  cSum = cSum + 1;
-}
+  if (movie === "rubyOption") {
+    rubySum = rubySum + 1;
+  }
 
-if (movie === "javascriptOption") {
-  javascriptSum = javascriptSum + 1;
-}
+  if (movie === "pythonOption") {
+    pythonSum = pythonSum + 1;
+  }
 
-if (movie === "rubyOption") {
-  rubySum = rubySum + 1;
-}
+  if (movie === "wrenOption") {
+    wrenSum = wrenSum + 1;
+  }
 
-if (movie === "pythonOption") {
-  pythonSum = pythonSum + 1;
-}
+  if (wordAssociation === "cOption") {
+    cSum = cSum + 1;
+  }
 
-if (movie === "wrenOption") {
-  wrenSum = wrenSum + 1;
-}
+  if (wordAssociation === "javascriptOption") {
+    javascriptSum = javascriptSum + 1;
+  }
 
-if (wordAssociation === "cOption") {
-  cSum = cSum + 1;
-}
+  if (wordAssociation === "rubyOption") {
+    rubySum = rubySum + 1;
+  }
 
-if (wordAssociation === "javascriptOption") {
-  javascriptSum = javascriptSum + 1;
-}
+  if (wordAssociation === "pythonOption") {
+    pythonSum = pythonSum + 1;
+  }
 
-if (wordAssociation === "rubyOption") {
-  rubySum = rubySum + 1;
-}
+  if (wordAssociation === "wrenOption") {
+    wrenSum = wrenSum + 1;
+  }
 
-if (wordAssociation === "pythonOption") {
-  pythonSum = pythonSum + 1;
-}
+  if (beach === "cOption") {
+    cSum = cSum + 1;
+  }
 
-if (wordAssociation === "wrenOption") {
-  wrenSum = wrenSum + 1;
-}
+  if (beach === "javascriptOption") {
+    javascriptSum = javascriptSum + 1;
+  }
 
-if (beach === "cOption") {
-  cSum = cSum + 1;
-}
+  if (beach === "rubyOption") {
+    rubySum = rubySum + 1;
+  }
 
-if (beach === "javascriptOption") {
-  javascriptSum = javascriptSum + 1;
-}
+  if (beach === "pythonOption") {
+    pythonSum = pythonSum + 1;
+  }
 
-if (beach === "rubyOption") {
-  rubySum = rubySum + 1;
-}
+  if (beach === "wrenOption") {
+    wrenSum = wrenSum + 1;
+  }
 
-if (beach === "pythonOption") {
-  pythonSum = pythonSum + 1;
-}
+  if (beach === "cOption") {
+    cSum = cSum + 1;
+  }
 
-if (beach === "wrenOption") {
-  wrenSum = wrenSum + 1;
-}
+  if (eggs === "javascriptOption") {
+    javascriptSum = javascriptSum + 1;
+  }
 
-if (beach === "cOption") {
-  cSum = cSum + 1;
-}
+  if (eggs === "rubyOption") {
+    rubySum = rubySum + 1;
+  }
 
-if (eggs === "javascriptOption") {
-  javascriptSum = javascriptSum + 1;
-}
+  if (eggs === "pythonOption") {
+    pythonSum = pythonSum + 1;
+  }
 
-if (eggs === "rubyOption") {
-  rubySum = rubySum + 1;
-}
+  if (eggs === "wrenOption") {
+    wrenSum = wrenSum + 1;
+  }
 
-if (eggs === "pythonOption") {
-  pythonSum = pythonSum + 1;
-}
+  if (cSum >= javascriptSum && cSum >= rubySum && cSum >= pythonSum && cSum >= wrenSum) {
+    $('#cResult').show();
+  }
 
-if (eggs === "wrenOption") {
-  wrenSum = wrenSum + 1;
-}
+  else if (javascriptSum >= cSum && javascriptSum >= rubySum && javascriptSum >= pythonSum && javascriptSum >= wrenSum) {
+    $('#javascriptResult').show();
+  }
 
-console.log(cSum);
-console.log(javascriptSum);
-console.log(rubySum);
-console.log(pythonSum);
-console.log(wrenSum);
+  else if (rubySum >= cSum && rubySum >= javascriptSum && rubySum >= pythonSum && rubySum >= wrenSum) {
+    $('#rubyResult').show();
+  }
 
-if (cSum >= javascriptSum && cSum >= rubySum && cSum >= pythonSum && cSum >= wrenSum) {
-  $('#cResult').show();
-}
+  else if (pythonSum >= cSum && pythonSum >= javascriptSum && pythonSum >= rubySum && pythonSum >= wrenSum) {
+    $('#pythonResult').show();
+  }
 
-else if (javascriptSum >= cSum && javascriptSum >= rubySum && javascriptSum >= pythonSum && javascriptSum >= wrenSum) {
-  $('#javascriptResult').show();
-}
+  else if (wrenSum >= cSum && wrenSum >= javascriptSum && wrenSum >= rubySum && wrenSum >= pythonSum) {
+    $('#wrenResult').show();
+  }
 
-else if (rubySum >= cSum && rubySum >= javascriptSum && rubySum >= pythonSum && rubySum >= wrenSum) {
-  $('#rubyResult').show();
-}
-
-else if (pythonSum >= cSum && pythonSum >= javascriptSum && pythonSum >= rubySum && pythonSum >= wrenSum) {
-  $('#pythonResult').show();
-}
-
-else if (wrenSum >= cSum && wrenSum >= javascriptSum && wrenSum >= rubySum && wrenSum >= pythonSum) {
-  $('#wrenResult').show();
-}
-
-});
+  });
 });

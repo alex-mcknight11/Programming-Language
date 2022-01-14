@@ -1,0 +1,1 @@
+const movie = $("input:radio[name=movie]:checked").val();

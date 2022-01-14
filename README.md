@@ -26,7 +26,7 @@ A fun little buzzfeed-style quiz to determine which programming language you sho
 
 ## Known Bugs
 
-* Form result will only clear and show new code sometimes. 
+* Form result will only clear and show only new result sometimes. 
 
 ## License
 

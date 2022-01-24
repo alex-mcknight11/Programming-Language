@@ -78,6 +78,10 @@ $(document).ready(function () {
 			cSum >= wrenSum
 		) {
 			$('#cResult').show();
+			$('javascriptResult').hide();
+			$('rubyResult').hide();
+			$('pythonResult').hide();
+			$('wrenResult').hide();
 		} else if (
 			javascriptSum >= cSum &&
 			javascriptSum >= rubySum &&
@@ -85,6 +89,10 @@ $(document).ready(function () {
 			javascriptSum >= wrenSum
 		) {
 			$('#javascriptResult').show();
+			$('cResult').hide();
+			$('rubyResult').hide();
+			$('pythonResult').hide();
+			$('wrenResult').hide();
 		} else if (
 			rubySum >= cSum &&
 			rubySum >= javascriptSum &&
@@ -92,6 +100,10 @@ $(document).ready(function () {
 			rubySum >= wrenSum
 		) {
 			$('#rubyResult').show();
+			$('cResult').hide();
+			$('javascriptResult').hide();
+			$('pythonResult').hide();
+			$('wrenResult').hide();
 		} else if (
 			pythonSum >= cSum &&
 			pythonSum >= javascriptSum &&
@@ -99,6 +111,10 @@ $(document).ready(function () {
 			pythonSum >= wrenSum
 		) {
 			$('#pythonResult').show();
+			$('javascriptResult').hide();
+			$('cResult').hide();
+			$('rubyResult').hide();
+			$('wrenResult').hide();
 		} else if (
 			wrenSum >= cSum &&
 			wrenSum >= javascriptSum &&
@@ -106,6 +122,10 @@ $(document).ready(function () {
 			wrenSum >= pythonSum
 		) {
 			$('#wrenResult').show();
+			$('cResult').hide();
+			$('javascriptResult').hide();
+			$('pythonResult').hide();
+			$('rubyResult').hide();
 		}
 	});
 });
